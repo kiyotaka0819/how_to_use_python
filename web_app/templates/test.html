@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- いろんな画面サイズで見れるようにする設定 -->
+    <title>HTMLの機能サンプルページ</title>
+    <!-- ページのタイトル ブラウザのタブに表示 -->
+    <style>
+    /* ここはCSS */
+    /* bodyはWebページ全体に適用 */
+body {
+    /* フォントの種類 */
+    font-family: Arial, sans-serif;
+    /* 行の高さ */
+    line-height: 1.6;
+    /* ページの余白 */
+    margin: 2em;
+}
+
+/* tableは表全体に適用 */
+table {
+    /* 表の幅 */
+    width: 100%;
+    /* 枠線を一つにまとめる */
+    border-collapse: collapse;
+}
+
+/* thとtdに適用 */
+th, td {
+    /* 枠線 */
+    border: 1px solid #ddd;
+    /* セルの内側の余白 */
+    padding: 8px;
+    /* 文字を左寄せ */
+    text-align: left;
+}
+
+/* thはヘッダーセルに適用 */
+th {
+    /* 背景色 */
+    background-color: #f2f2f2;
+}
+
+/* formは入力フォーム全体に適用 */
+form {
+    /* 枠線 */
+    border: 1px solid #ccc;
+    /* 内側の余白 */
+    padding: 1em;
+    /* 角を丸くする */
+    border-radius: 8px;
+}
+
+/* inputとbuttonに適用 */
+input, button {
+    /* ブロック要素として縦に並べる */
+    display: block;
+    /* 下側の余白 */
+    margin-bottom: 1em;
+    /* 内側の余白 */
+    padding: 0.5em;
+    /* 幅 */
+    width: 100%;
+    /* 幅の計算方法 */
+    box-sizing: border-box;
+}
+
+/* buttonはボタンだけに適用 */
+button {
+    /* 背景色 */
+    background-color: #007BFF;
+    /* 文字色 */
+    color: white;
+    /* 枠線なし */
+    border: none;
+    /* マウスカーソルを指の形に */
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <!-- bodyタグは、表示される内容を書く -->
+
+    <!-- 見出しのタグ 数字が小さいほど大きい -->
+    <h1>HTMLの基本機能を学ぶ</h1>
+    <h2>h2タグの見出し</h2>
+    <h3>h3タグの見出し</h3>
+    <p>
+        <!-- pタグは、段落を作る -->
+        これはpタグを使った文章　テキストを入力する時に使う<br>
+        `br`タグを使うと、文章の途中で改行できる
+    </p>
+
+    <!-- リストのタグ -->
+    <h3>リストの例</h3>
+    <h4>順序なしリスト（`<ul>`）</h4>
+    <ul>
+        <!-- `ul`は順序がないリスト`<li>`はリストの項目を示す -->
+        <li>項目1</li>
+        <li>項目2</li>
+        <li>項目3</li>
+    </ul>
+    <h4>順序ありリスト（`<ol>`）</h4>
+    <ol>
+        <!-- `ol`は順序があるリスト　自動的に番号がつく -->
+        <li>最初のステップ</li>
+        <li>次のステップ</li>
+        <li>最後のステップ</li>
+    </ol>
+
+    <!-- リンクのタグ -->
+    <h3>リンクの例</h3>
+    <p>
+        <!-- `a`タグは、他のページに飛ぶためのリンクを作る -->
+        <!-- `href`に飛びたいページのURLを設定 -->
+        <a href="https://www.google.com" target="_blank">Googleにアクセス</a>
+        <!-- `target="_blank"`にすると、新しいタブで開く -->
+    </p>
+
+    <!-- 画像のタグ -->
+    <h3>画像の例</h3>
+    <!-- `img`タグは、画像を表示する　`src`に画像の場所、`alt`に画像の説明を入れる -->
+    <!-- `alt`は画像が表示されなかった用テキスト -->
+    <img src="https://placehold.co/400x200/cccccc/333333?text=Sample+Image" alt="サンプル画像" style="max-width: 100%;">
+
+    <!-- 表のタグ -->
+    <h3>表の例</h3>
+    <table>
+        <!-- `table`は表の全体 -->
+        <thead>
+            <!-- `thead`は表のヘッダー（見出し部分） -->
+            <tr>
+                <!-- `tr`は行を、`th`はヘッダーのセルを作る -->
+                <th>名前</th>
+                <th>年齢</th>
+                <th>職業</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- `tbody`は表の本体部分 -->
+            <tr>
+                <!-- `td`はデータのセルを作る -->
+                <td>市川</td>
+                <td>29</td>
+                <td>テロップ屋さん</td>
+            </tr>
+            <tr>
+                <td>天本</td>
+                <td>15</td>
+                <td>天才</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- フォームのタグ -->
+    <h3>フォームの例</h3>
+    <form>
+        <!-- `form`は入力フォームの全体 -->
+        <label for="name">名前:</label>
+        <!-- `label`はフォームの項目名を、`input`は入力欄を作る -->
+        <!-- `for`と`id`を同じにすると、クリックしやすい -->
+        <input type="text" id="name" name="name" placeholder="名前を入力してください">
+
+        <label for="email">メールアドレス:</label>
+        <input type="email" id="email" name="email" placeholder="メールアドレスを入力してください">
+        
+        <!-- `button`は、押すボタン -->
+        <button type="submit">送信する</button>
+    </form>
+
+</body>
+</html>
