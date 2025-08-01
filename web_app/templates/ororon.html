@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- 文字コード -->
+    <meta charset="UTF-8">
+    <!-- スマホ対応の設定 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ページのタイトル -->
+    <title>登録完了</title>
+    <style>
+        /* bodyはWebページ全体に適用 */
+        body {
+            /* フォントの種類 */
+            font-family: Arial, sans-serif;
+            /* 行の高さ */
+            line-height: 1.6;
+            /* ページの余白 */
+            margin: 2em;
+            /* 文字を中央寄せ */
+            text-align: center;
+        }
+        /* containerは主要なコンテンツを囲む要素 */
+        .container {
+            /* 最大幅 */
+            max-width: 600px;
+            /* ページの中央に配置 */
+            margin: 0 auto;
+            /* 内側の余白 */
+            padding: 2em;
+            /* 枠線 */
+            border: 1px solid #ddd;
+            /* 角を丸くする */
+            border-radius: 8px;
+            /* 背景色 */
+            background-color: #f9f9f9;
+        }
+        /* h1は一番大きな見出し */
+        h1 {
+            /* 文字の色 */
+            color: #28a745;
+        }
+        /* aはリンク */
+        a {
+            /* インライン要素をブロック要素として扱う */
+            display: inline-block;
+            /* 上に余白 */
+            margin-top: 1em;
+            /* 内側の余白 */
+            padding: 0.5em 1em;
+            /* 背景色 */
+            background-color: #007BFF;
+            /* 文字色 */
+            color: white;
+            /* 下線なし */
+            text-decoration: none;
+            /* 角を丸くする */
+            border-radius: 5px;
+            /* ホバー時の背景色 */
+            transition: background-color 0.3s;
+            }
+            /* マウスを乗せたとき（ホバー）のスタイル */
+            a:hover {
+            /* 背景色 */
+            background-color: rgba(116, 131, 214, 0.904);
+            /* 文字色 */
+            color: black;
+            /* 下線をつける */
+            text-decoration: underline;
+            /* カーソルをポインターにする */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>登録が完了しました！</h1>
+        <p>ご登録いただき、ありがとうございます。</p>
+        <p><strong>{{ name }}</strong>さん</p>
+        <p>メールアドレス: <strong>{{ email }}</strong></p>
+        <p>引き続きサービスをご利用ください。</p>
+        <a href="/">トップページに戻る</a>
+    </div>
+</body>
+</html>

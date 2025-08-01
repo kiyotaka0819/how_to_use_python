@@ -68,6 +68,8 @@ input, button {
 
 /* buttonはボタンだけに適用 */
 button {
+    /* 背景色と文字色、下線の変化を0.7秒かける */
+    transition: background-color 0.7s, color 0.7s, border-bottom-color 0.7s;
     /* 背景色 */
     background-color: #007BFF;
     /* 文字色 */
@@ -76,7 +78,25 @@ button {
     border: none;
     /* マウスカーソルを指の形に */
     cursor: pointer;
+    /* 角を丸くする */
+    border-radius: 5px;
+    /* 下線として使うためのボーダー */
+    border-bottom: 2px solid transparent;
+    /* パディングを調整して文字と下線の間を空ける */
+    padding-bottom: 2px;
 }
+button:hover {
+    /* マウスを乗せたときの背景色 */
+    background-color: rgba(214, 8, 8, 0.904);
+    /* マウスを乗せたときの文字色 */
+    color: rgb(234, 248, 29);
+    /* マウスを乗せたときの下線 */
+    border-bottom-color: rgb(234, 248, 29);
+    /* カーソルを指の形にする */
+    cursor: pointer;
+    
+
+    }
     </style>
 </head>
 <body>
@@ -155,7 +175,7 @@ button {
 
     <!-- フォームのタグ -->
     <h3>フォームの例</h3>
-    <form>
+    <form action =/register method="post">
         <!-- `form`は入力フォームの全体 -->
         <label for="name">名前:</label>
         <!-- `label`はフォームの項目名を、`input`は入力欄を作る -->
@@ -166,7 +186,7 @@ button {
         <input type="email" id="email" name="email" placeholder="メールアドレスを入力してください">
         
         <!-- `button`は、押すボタン -->
-        <button type="submit">送信する</button>
+        <button type="submit">おろろんちょちょぱあ</button>
     </form>
 
 </body>
