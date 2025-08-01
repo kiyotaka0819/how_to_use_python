@@ -1,0 +1,1 @@
+print('Hello, World!')  # 言語学習の基本
